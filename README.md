@@ -41,3 +41,24 @@ $ vagrant up
 Go to the [Cloudera Manager web console](http://vm-cluster-node1:7180) and follow the installation instructions. For more detailed instructions on how to do that, you can use [this guide](http://dandydev.net/blog/installing-virtual-hadoop-cluster).
 
 **Done!** Have fun with your Hadoop cluster.
+
+
+Installing Hadoop and related components
+Surf to: http://vm-cluster-node1:7180
+Login with admin/admin
+Select Cloudera Express and click Continue twice
+On the page where you have to specifiy hosts, enter the following: vm-cluster-node[1-4] and click Search. 4 nodes should pop up and be selected. Click Continue.
+On the next page (“Cluster Installation > Select Repository”), leave everything as is and click Continue
+On the next page (“Cluster Installation > Configure Java Encryption”) I’d advise to tick the box, but only if your country allows it. Click Continue
+On this page do the following:
+Login To All Hosts As : Another user -> enter vagrant
+In the two password fields enter: vagrant
+Click Continue
+wait for CM to install the prerequisites… and click Continue
+wait for CM to download and distribute the CDH packages… and click Continue
+wait while the installer is inspecting the hosts, and Run Again if you encounter any (serious) errors (I got some that went away the second time). After this, click Finish
+For now, we’ll install everything but HBase. You can add HBase later, but it’s quite taxing for the virtual cluster. So on the "Cluster Setup” page, choose Custom Services and select the following: HDFS, Hive, Hue, Impala, Oozie, Solr, Spark, Sqoop2, YARN and ZooKeeper. Click Continue
+On the next page, you can select what services end up on what nodes. Usually Cloudera Manager chooses the best configuration here, but you can change it if you want. For now, click Continue
+On the “Database Setup” page, leave it on Use Embedded Database. Click Test Connection (it says it will skip this step) and click Continue
+Click Continue on the “Review Changes” step. Cloudera Manager will now try to configure and start all services.
+And you're Done!. Have fun experimenting with Hadoop!
