@@ -26,6 +26,10 @@ service cloudera-scm-server start
 SCRIPT
 
 $hosts_script = <<SCRIPT
+sudo apt-get install curl -y
+wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+sudo easy_install pip
+sudo pip install cm-api
 cat > /etc/hosts <<EOF
 127.0.0.1       localhost
 
