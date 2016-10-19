@@ -1,0 +1,5 @@
+[api]
+manager  = vm-cluster-node1
+port     = 7180
+username = admin
+password = admin
