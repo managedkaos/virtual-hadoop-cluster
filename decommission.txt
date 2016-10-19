@@ -1,0 +1,2 @@
+ 5822  2016-10-18 17:44:10 curl -i -s -X POST -u "admin:admin" http://vm-cluster-node1:7180/api/v13/cm/commands/hostsDecommission -H 'Content-Type: application/json' -d '{"items":["vm-cluster-node4"]}'
+ 5823  2016-10-18 17:44:54 h | grep 5822 > decommission.txt

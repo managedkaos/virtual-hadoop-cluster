@@ -1,0 +1,1 @@
+ curl -i -s -X POST -u "admin:admin" http://vm-cluster-node1:7180/api/v13/hosts/460b1cde-3ac0-44fc-bc98-c68f9fc76cec/commands/enterMaintenanceMode
