@@ -3,23 +3,19 @@
  # Need to stop roles/services before the host can be decommed?
 
 17:43 $ curl -i -s -X POST -u "admin:admin" http://vm-cluster-node1:7180/api/v13/cm/commands/hostsDecommission -H 'Content-Type: application/json' -d '{"items":["vm-cluster-node4"]}'
-HTTP/1.1 200 OK
-Expires: Thu, 01-Jan-1970 00:00:00 GMT
-Set-Cookie: CLOUDERA_MANAGER_SESSIONID=1mgzf2zpwj5rlk03carya8i1j;Path=/;HttpOnly
-Content-Type: application/json
-Date: Wed, 19 Oct 2016 00:44:10 GMT
-Transfer-Encoding: chunked
-Server: Jetty(6.1.26.cloudera.4)
+    {
+      "id" : 112,
+      "name" : "HostsDecommission",
+      "startTime" : "2016-10-19T00:44:10.605Z",
+      "endTime" : "2016-10-19T00:44:10.607Z",
+      "active" : false,
+      "success" : false,
+      "resultMessage" : "A host cannot be decommissioned if there are running Cloudera Management Service roles on it. Please stop or remove any such roles before decommissioning the host.",
+      "children" : {
+        "items" : [ ]
+      }
+    }
 
-{
-  "id" : 112,
-  "name" : "HostsDecommission",
-  "startTime" : "2016-10-19T00:44:10.605Z",
-  "endTime" : "2016-10-19T00:44:10.607Z",
-  "active" : false,
-  "success" : false,
-  "resultMessage" : "A host cannot be decommissioned if there are running Cloudera Management Service roles on it. Please stop or remove any such roles before decommissioning the host.",
-  "children" : {
-    "items" : [ ]
-  }
-}
+
+# This means that the host can't be running a manangement service like reports manager, etc.
+
