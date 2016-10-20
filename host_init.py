@@ -17,4 +17,8 @@ api = ApiResource(manager, port, username, password)
 
 for h in api.get_all_hosts():
     if hostname == h.hostname:
-        # init stuff goes here
+        thishost = h
+print thishost.hostname
+print thishost.hostId
+print thishost.hostUrl
+
