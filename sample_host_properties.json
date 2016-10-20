@@ -1,1 +1,21 @@
-{"status": "None", "hostId": "f30747d6-828d-4c84-aa0c-9726c673cd0c", "rackId": "/default", "_resource_root": "<cm_api.api_client.ApiResource object at 0x10e5cab90>", "healthSummary": "None", "healthChecks": "None", "numPhysicalCores": 2, "hostUrl": "http://vm-cluster-node1:7180/cmf/hostRedirect/f30747d6-828d-4c84-aa0c-9726c673cd0c", "lastHeartbeat": "None", "maintenanceOwners": [], "clusterRef": "None", "entityStatus": "None", "roleRefs": "None", "commissionState": "COMMISSIONED", "numCores": 2, "totalPhysMemBytes": 4147060736, "ipAddress": "10.211.55.100", "hostname": "vm-cluster-node1", "maintenanceMode": "False"}
+{
+    "_resource_root": "<cm_api.api_client.ApiResource object at 0x10e5cab90>",
+    "clusterRef": "None",
+    "commissionState": "COMMISSIONED",
+    "entityStatus": "None",
+    "healthChecks": "None",
+    "healthSummary": "None",
+    "hostId": "f30747d6-828d-4c84-aa0c-9726c673cd0c",
+    "hostUrl": "http://vm-cluster-node1:7180/cmf/hostRedirect/f30747d6-828d-4c84-aa0c-9726c673cd0c",
+    "hostname": "vm-cluster-node1",
+    "ipAddress": "10.211.55.100",
+    "lastHeartbeat": "None",
+    "maintenanceMode": "False",
+    "maintenanceOwners": [],
+    "numCores": 2,
+    "numPhysicalCores": 2,
+    "rackId": "/default",
+    "roleRefs": "None",
+    "status": "None",
+    "totalPhysMemBytes": 4147060736
+}
