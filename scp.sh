@@ -1,3 +1,8 @@
 #!/bin/bash 
-for i in {1..3}; do vagrant scp config.txt slave${i}:~; done
-for i in {1..3}; do vagrant scp host_init.py slave${i}:~; done
+files="config.txt host_init.py"
+
+for file in $files; do
+    for i in {1..3}; do
+        vagrant scp $file slave${i}:~;
+    done
+done
