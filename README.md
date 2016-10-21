@@ -62,3 +62,7 @@ On the next page, you can select what services end up on what nodes. Usually Clo
 On the “Database Setup” page, leave it on Use Embedded Database. Click Test Connection (it says it will skip this step) and click Continue
 Click Continue on the “Review Changes” step. Cloudera Manager will now try to configure and start all services.
 And you're Done!. Have fun experimenting with Hadoop!
+
+Add a Vault server to hold the user:pass for the API calls...
+https://github.com/haf/vagrant-vault/blob/master/Vagrantfile
+
